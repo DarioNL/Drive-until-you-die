@@ -15,8 +15,9 @@ public class PlayerCar : MonoBehaviour
         float xDirection = Input.GetAxisRaw("Horizontal");
         float zDirection = Input.GetAxisRaw("Vertical");
 
-        
-        if(gameObject.transform.position.x >= 27.5f) 
+        //Detects if the player has left the field of play.
+        //If so, the player is stopped and is returned to his previous position.
+        if (gameObject.transform.position.x >= 27.5f) 
         {
             gameObject.transform.position = new Vector3(27.5f, 0, transform.position.z);
         } 
