@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerCar : MonoBehaviour
 {
-    //Determines the speed of the car
+    // Determines the speed of the car
     public float speed;
 
 
@@ -15,8 +15,8 @@ public class PlayerCar : MonoBehaviour
         float xDirection = Input.GetAxisRaw("Horizontal");
         float zDirection = Input.GetAxisRaw("Vertical");
 
-        //Detects if the player has left the field of play.
-        //If so, the player is stopped and is returned to his previous position.
+        // Detects if the player has left the field of play.
+        // If so, the player is stopped and is returned to his previous position.
         if (gameObject.transform.position.x >= 27.5f) 
         {
             gameObject.transform.position = new Vector3(27.5f, 0, transform.position.z);
@@ -35,8 +35,8 @@ public class PlayerCar : MonoBehaviour
             gameObject.transform.position = new Vector3(transform.position.x, 0, -26);
         }
 
-        //Representation of 3D vectors and points.
-        //It adjusts the position of z and x axis of the car with the input times the speed
+        // Representation of 3D vectors and points.
+        // It adjusts the position of z and x axis of the car with the input times the speed
         gameObject.transform.position = new Vector3(transform.position.x + (xDirection * speed), 0,
       transform.position.z + (zDirection * speed));
     }
