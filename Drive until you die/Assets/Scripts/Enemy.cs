@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 { 
@@ -27,6 +28,7 @@ public class Enemy : MonoBehaviour
         {
             //Deletes the other game object if so.
             Destroy(other.gameObject);
+            SceneManager.LoadScene("GameOver");
         }
 
         //Removes the Enemy from the game

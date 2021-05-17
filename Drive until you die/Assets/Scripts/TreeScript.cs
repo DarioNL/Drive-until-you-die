@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TreeScript : MonoBehaviour
 {
@@ -41,6 +42,7 @@ public class TreeScript : MonoBehaviour
 
             //Removes the Tree from the game
             Destroy(gameObject);
+            SceneManager.LoadScene("GameOver");
         }
 
 
