@@ -33,10 +33,10 @@ public class TreesSpawning : MonoBehaviour
         GameObject t2 = Instantiate(TreePrefab) as GameObject;
 
         //Adds the velocity to the left tree based on the given speed.
-        t1.transform.position = new Vector3(minX, 0.1f, 44f);
+        t1.transform.position = new Vector3(minX, -1.1f, 44f);
 
         //Adds the velocity to the left tree based on the given speed.
-        t2.transform.position = new Vector3(maxX, 0.1f, 44f);
+        t2.transform.position = new Vector3(maxX, -1.1f, 44f);
     }
 
     //A coroutine is like a function that has the ability to pause execution and return control to Unity but then to continue where it left off on the following frame.
